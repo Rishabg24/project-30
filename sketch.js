@@ -1,0 +1,55 @@
+
+const Engine = Matter.Engine;
+const World = Matter.World;
+const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
+var engine, world;
+var gameState="onSling";
+function preload(){
+
+
+
+
+}
+
+
+function setup(){
+  createCanvas(800,700);
+  engine = Engine.create();
+	world = engine.world;
+  ground1=new Ground(400,690,800,10);
+  ground2=new Ground(250,300,250,10);
+   box1= new Box(250,400,50,50);
+   box2= new Box(350,400,50,50);
+   box3= new Box(400,400,50,50);
+   box4= new Box(450,400,50,50);
+   box5= new Box(350,350,50,50);
+   box6= new Box(400,350,50,50);
+   box7= new Box(450,350,50,50);
+   box8= new Box(375,300,50,50);
+   box9= new Box(425,300,50,50);
+   box10=new Box(400,250,50,50)
+   polygon= new Polygon(100,100,20,20);
+    Engine.run(engine);
+ 
+}
+
+
+function draw(){
+  background(0)
+  Engine.update(engine)
+  ground1.display();
+  box1.display();
+  box2.display();
+  box3.display();
+  box4.display();
+  box5.display();
+  box6.display();
+  box7.display();
+  box8.display();
+  box9.display();
+  box10.display();
+  ball.display();
+}
+
+
